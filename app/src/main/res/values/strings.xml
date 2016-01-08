@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Hangman</string>
+    <string name="title_activity_game_hub">Hangman</string>
+    <string-array name="difficulty_array">
+        <item>Easy</item>
+        <item>Intermediate</item>
+        <item>Difficult</item>
+    </string-array>
+    <string-array name="lives_array">
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+    </string-array>
+</resources>

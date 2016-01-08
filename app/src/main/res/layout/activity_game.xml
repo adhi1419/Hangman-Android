@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Game">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/word_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hint_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/word_layout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/hint_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chances_left_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_gridview"
+        android:layout_below="@id/hint_layout"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/drawable_hangman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hangman_stage_1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <GridView
+            android:id="@+id/gridView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="72dp"
+            android:gravity="center"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth">
+
+        </GridView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_game_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/btn_home"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.5"
+            android:scaleType="centerInside"
+            android:src="@drawable/material_game_hub_button" />
+
+        <ImageView
+            android:id="@+id/btn_restart"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.5"
+            android:scaleType="centerInside"
+            android:src="@drawable/material_game_restart_button" />
+    </LinearLayout>
+
+
+</RelativeLayout>
